@@ -1,0 +1,47 @@
+.about{
+    width:1300px;
+    max-width:100%;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about h3{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.nachoose-story{
+    width: 400px;
+    height: 225px;
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('./pictures/nacho-bonito.jpg');
+    background-size: cover;
+    transform: skew(-20deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nachoose-story h1, .our-food h1{
+    color: white;
+    font-size: 3rem;
+}
+
+.about-text{
+    text-align: left;
+}
+
+.about-text p{
+    font-size: 1.1rem;
+}
+
+.our-food{
+    width: 450px;
+    height: 225px;
+    background: url('./pictures/tomato-com-nacho.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

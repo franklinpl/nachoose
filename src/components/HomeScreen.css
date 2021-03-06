@@ -1,0 +1,30 @@
+.homescreen{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.homescreen-button{
+    text-align: center;
+    margin-top: 100px;
+}
+
+#homescreen-button, .homescreen-button a{
+    background-color: rgb(117, 117, 236);
+    width: 150px;
+    height:40px;
+    text-decoration: none
+}
+
+.homescreen-opening-times{
+    margin-top: 100px;
+}
+
+.homescreen-opening-times h3{
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+#opening-times{
+    font-size: 2rem;
+}
