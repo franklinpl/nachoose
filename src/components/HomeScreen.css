@@ -4,25 +4,46 @@
     justify-content: center;
 }
 
+.homescreen img{
+    width:500px;
+    height: auto;
+    align-self: center;
+}
+
 .homescreen-button{
     text-align: center;
     margin-top: 100px;
 }
 
+.main{
+    background: url('./pictures/nacho-mao.jpg');
+    background-size: cover;
+}
+
 #homescreen-button, .homescreen-button a{
-    background-color: rgb(117, 117, 236);
+    background-color:#2B93C6;
     width: 150px;
     height:40px;
     text-decoration: none
 }
 
+.homescreen-pattern{
+    margin-top:50px; 
+}
+
+.homescreen-pattern img{
+    height:25px;
+    width:400px
+}
+
 .homescreen-opening-times{
-    margin-top: 100px;
+    margin-top:0px;
 }
 
 .homescreen-opening-times h3{
     font-weight: 300;
     font-size: 1.3rem;
+    margin:15px
 }
 
 #opening-times{

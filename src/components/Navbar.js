@@ -1,13 +1,15 @@
 import './Navbar.css'
 import {Link} from 'react-router-dom'
+import imageLogo from './pictures/nachoose-logo.png'
 
 function Navbar(){
     return(
         <div className='navbar'>
-            <Link to='/'>
-                <h1 className='navbar-logo'>LOGO</h1>
-            </Link>
-            
+            <div className='navbar-logo'>
+                <Link to='/'>
+                    <img src={imageLogo}></img>
+                </Link>
+            </div>
             <div className='navbar-components'>
                 
                 <Link to='/choose'>

@@ -1,0 +1,39 @@
+.choose{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:1300px;
+    max-width:100%;
+    height:85vmax
+}
+
+.choose h1{
+    margin-top:100px
+}
+
+.choose img{
+    height:25px;
+    width:400px;
+    margin-top: 20px;
+}
+
+.choose input{
+    width:500px;
+    height:50px;
+    border-radius: 30px;
+    border: rgba(0,0,0,0.5);
+    margin-top: 40px;
+    font-size: 1.7rem;
+}
+
+.choose button{
+    width: 120px;
+    height: 35px;
+    background-color:#2B93C6;
+    border:none;
+    color:white;
+    border-radius: 6px;
+    margin-top: 60px;
+    cursor:pointer;
+    text-align: center;
+}
