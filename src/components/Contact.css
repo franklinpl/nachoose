@@ -4,7 +4,7 @@
     align-items: center;
     width:1300px;
     max-width: 100%;
-    height: auto;
+    height: 100vmin
 }
 
 .contact-form{
