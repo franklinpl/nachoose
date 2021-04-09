@@ -7,3 +7,60 @@
 .zero-cart h1{
     margin-bottom:-70px
 }
+
+.cart-item{
+    display:flex;
+    flex-direction: column;
+}
+
+.cart-component, .delivery-fee, .cart-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fbfbfb;
+    margin: 10px 0px 0px 30px;
+    width:90vmax
+}
+
+.cart-component div, .delivery-fee h2, .cart-total h1, .cart-component #extras{
+    margin-left:20px
+}
+
+.cart-component-next{
+    margin-top:-20px
+}
+
+#price{
+    margin-right:20px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.cart-total p{
+    font-size: 2rem;
+    margin-right:20px;
+    font-weight:bold
+}
+
+.cart-component div p{
+    text-align: left;
+    margin-top:-15px
+}
+
+#another-bowl{
+    background-color: #E3426C;
+    color:#fbfbfb;
+}
+
+.another-bowl{
+    text-align: left;
+    margin:20px 0px 0px 30px
+}
+
+.another-bowl a{
+    text-decoration: none;
+}
+
+#confirm-order{
+    background-color: #2B93C6;
+}

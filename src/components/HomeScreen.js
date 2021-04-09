@@ -3,14 +3,15 @@ import Button from '@material-ui/core/Button'
 import {Link} from 'react-router-dom'
 import imageLogo from './pictures/nachoose-logo.png'
 import pattern from './pictures/pattern.png'
+import backgroundImage from './pictures/nacho-mao.jpg'
 
 function HomeScreen(){
     return(
         <div className='homescreen'>
             <div className='main'>
-                <img src={imageLogo} alt='image logo'/>
+                <img src={imageLogo} alt='logo' id='homescreen-logo'/>
                 <div className='homescreen-button'>
-                    <Link to='/order-now'>
+                    <Link to='/choose/choose-a-size'>
                         <Button variant='contained' color='primary' id='homescreen-button'>Order Now!</Button>
                     </Link> 
                 </div>

@@ -2,8 +2,37 @@ import './YourOrder.css'
 import {connect} from 'react-redux'
 import Button from '@material-ui/core/Button'
 import {Link} from 'react-router-dom'
+import pattern from './pictures/pattern.png'
+import {useEffect, useState} from 'react'
 
 function YourOrder({cart}){
+
+    const [totalPrice, setTotalPrice] = useState('initial price')
+    const [extraValue, setExtraValue] = useState(0)
+
+    useEffect(() => {
+        if (cart.length > 0){
+            const cartPrice = cart.map(item => 
+                item.filter(item => item.price > 0))[0][0].price
+            const deliveryFee = 3.5;
+            let extras = 0;
+            cart.map(item => item.map(item => {
+                if (item.extraCheese === 'yes'){extras += 1}
+                if (item.extraSauce === 'yes'){extras += 1}
+                if (item.type === 'Extra'){extras += 0.8}
+    
+            }))
+            setExtraValue(extras)
+            setTotalPrice(cartPrice+deliveryFee+extras)
+        }
+        
+    }
+    )
+
+    const setPrice = (value) => {
+        setTotalPrice(value+3.5)
+    }
+
     return(
         <div className='your-order'>
             {cart.length === 0 ?
@@ -18,18 +47,70 @@ function YourOrder({cart}){
 
                 :
 
-                <div className='items-in-cart'>
-                    
+        <div className='items-in-cart'>
+            <div className='your-order'>
+                <h1>Your order</h1>
+                <img src={pattern} alt='company pattern'/> 
+
+                <div>
+    
+                    {cart.map((item) => {
+                        return <div className='cart-item'>
+                            
+                                    {item.map((component) => {
+                                        return component.type === 'Size' ? <div>
+                                                <div className='cart-component'>
+                                                    <div>
+                                                        <h2>{component.name}</h2>
+                                                        <p>{`Remove`}</p>
+                                                    </div>
+                                                    <h2 id='price'>{component.price}</h2>
+                                                    {() => setPrice(component.price)} 
+                                                </div>
+                                                {extraValue > 0 ? <div className='cart-component cart-component-next'>
+                                                    <h2 id='extras'>Extras</h2>
+                                                    <p id='price'>{extraValue}</p>
+                                                </div> : ''}
+                            
+                                            </div> : ''})}
+                                </div>
+                            })}
+                            
+                </div>   
+                
+                <div className='delivery-fee'>
+                    <h2>Delivery fee</h2>
+                    <p id='price'>3.50</p>
                 </div>
+                
+                <div className='cart-total'>
+                    <h1>Total</h1>
+                    <p id='price-total'>{totalPrice}</p>
+                </div>
+                
+                <div className='another-bowl'>
+                    <Link to='/choose/choose-a-size'>
+                        <Button id='another-bowl'>Add another bowl</Button>
+                    </Link>
+                </div>
+
+                <div className='confirm-order'>
+                    <Button id='confirm-order' color='primary' variant='contained'>Confirm order</Button>
+                </div>
+            
+            </div>
+            </div>          
         }
         </div>
     )
-}
+    }
 
 const mapStateToProps = state => {
     return{
         cart: state.shop.cart
     }
 }
+
+
 
 export default connect (mapStateToProps) (YourOrder)

@@ -1,7 +1,10 @@
 .choose-a-cheese{
     width: 1300px;
     max-width: 100%;
-    height: 100vmin
+    height: 100vmin;
+    background-color: #F2F2F3;
+    position:relative;
+    z-index:1
 }
 
 .choose-a-cheese h1{
@@ -71,4 +74,25 @@
 
 .extra-cheese{
     margin-bottom:20px
+}
+
+.main-choose-a-cheese{
+    position:relative;
+}
+
+.main-choose-a-cheese::before{
+    content: '';
+    display:block;
+    position: fixed;
+    background-image: url('../pictures/nacho-cheese-modified.png');
+    background-repeat: no-repeat;
+    background-size: 1300px 400px;
+    clip-path: polygon(0 0, 100% 33%, 100% 100%, 0 100%);
+    left:0;
+    bottom:0;
+    width:100%;
+    height:400px;
+    filter: brightness(80%);
+    z-index: -1;
+    filter: blur(2px);
 }

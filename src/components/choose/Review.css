@@ -1,0 +1,96 @@
+.review{
+    width: 1300px;
+    max-width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F3;
+}
+
+.review h1{
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.review img{
+    width:220px;
+    align-self: center;
+    margin-bottom:50px
+}
+
+.review-main{
+    width:70vw;
+    align-self: center;
+}
+
+.review-box{
+    width: 100%;
+    height: 80px;
+    margin-bottom:10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FBFBFB;
+}
+
+.review-box p{
+    margin-right: 20px;
+    font-size: 1.6rem;
+}
+
+.title-and-change{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.title-and-change h1{
+    margin-bottom:0px;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.title-and-change a{
+    font-size: 1rem;
+    text-align: left;
+}
+
+.review-quantity{
+    display: flex;
+    background-color: #F2F2F3;
+    align-items: center;
+}
+
+.review-quantity h1{
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.review-quantity input{
+    width:20px;
+    height:20px;
+    margin-left:10px;
+    text-align: center;
+}
+
+#review-button{
+    background-color: #2B93C6;
+    margin-bottom: 60px;
+}
+
+.review-button a{
+    text-decoration: none;
+}
+
+.name-and-extra{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#extra{
+    font-size: 0.8rem;
+    margin-top: -22px;
+    text-align: right;
+}
+

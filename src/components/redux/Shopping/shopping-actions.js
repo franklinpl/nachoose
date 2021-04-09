@@ -9,6 +9,15 @@ export const addToCart = (itemId) => {
     }
 }
 
+export const addToReview = (itemId) => {
+    return {
+        type: actionTypes.ADD_TO_REVIEW,
+        payload: {
+            id: itemId
+        }
+    }
+}
+
 export const removeFromCart = (itemId) => {
     return {
         type: actionTypes.REMOVE_FROM_CART,

@@ -2,50 +2,87 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
+    position: absolute;
+    z-index: -1;
+    background-color: #F2F2F3;
+    width: 1300px;
+    max-width: 100%;
+    height:100vh
 }
 
 .homescreen img{
     width:500px;
     height: auto;
     align-self: center;
+    position: relative;
+    bottom:60px
+}
+
+#homescreen-logo{
+    max-width: 100%;
 }
 
 .homescreen-button{
-    text-align: center;
-    margin-top: 100px;
-}
-
-.main{
-    background: url('./pictures/nacho-mao.jpg');
-    background-size: cover;
+    align-self: center;
+    position:relative;
+    width:1300px;
+    max-width: 100%;
+    
 }
 
 #homescreen-button, .homescreen-button a{
     background-color:#2B93C6;
-    width: 150px;
-    height:40px;
+    width: 200px;
+    height:50px;
     text-decoration: none
 }
 
 .homescreen-pattern{
-    margin-top:50px; 
+    z-index:1;
+    position:relative;
+    top:70px;
+    text-align: center;
 }
 
 .homescreen-pattern img{
-    height:25px;
-    width:400px
+    height:10px;
+    width:200px
 }
 
 .homescreen-opening-times{
-    margin-top:0px;
+    position:relative;
+    z-index: 1;
+    top:20px
 }
 
 .homescreen-opening-times h3{
     font-weight: 300;
     font-size: 1.3rem;
-    margin:15px
+    margin:5px
 }
 
 #opening-times{
-    font-size: 2rem;
+    font-size: 1.3rem;
+}
+
+.main{
+    position:relative;
+    z-index: 1;
+    width:1300px;
+}
+
+.main::before{
+    content: '';
+    display:block;
+    position: absolute;
+    z-index:-1;
+    background-image: url('./pictures/nacho-mao-cortado.png');
+    clip-path: polygon(0 0, 100% 33%, 100% 100%, 0 68%);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    left:0;
+    top:-130px;
+    width:100%;
+    height:400px;
+    filter: brightness(80%);
 }

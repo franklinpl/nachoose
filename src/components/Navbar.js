@@ -7,12 +7,12 @@ function Navbar(){
         <div className='navbar'>
             <div className='navbar-logo'>
                 <Link to='/'>
-                    <img src={imageLogo}></img>
+                    <img src={imageLogo} alt='logo'></img>
                 </Link>
             </div>
             <div className='navbar-components'>
                 
-                <Link to='/choose'>
+                <Link to='/choose/choose-a-size'>
                     <h2>Choose</h2>
                 </Link>
                 
