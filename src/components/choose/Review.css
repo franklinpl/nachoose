@@ -94,3 +94,15 @@
     text-align: right;
 }
 
+@media(max-width: 710px){
+    .review-main{width: 80vw;}
+}
+
+@media(max-width:574px){
+    .review-main{width: 90vw;}
+}
+
+@media(max-width:490px){
+  .title-and-change h1{font-size: 1.4rem;}
+  #item-name{font-size: 1.2rem}
+}

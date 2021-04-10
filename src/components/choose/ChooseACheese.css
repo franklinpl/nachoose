@@ -96,3 +96,7 @@
     z-index: -1;
     filter: blur(2px);
 }
+
+@media(max-width:574px){
+    .main-choose-a-cheese::before{background-image: url('../pictures/nacho-cheese.jpg');  background-size: 420px 400px;} 
+}

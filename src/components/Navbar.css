@@ -33,3 +33,22 @@
     text-decoration: none;
     color:black
 }
+
+@media(max-width: 710px){
+    .navbar-logo{width:600px}
+    .navbar-logo img{width:150px}
+    .navbar-components h2{font-size:1.4rem}
+    .navbar-logo img{margin-left: 20px;}
+}
+
+@media(max-width:574px){
+    .navbar-logo{width:500px}
+    .navbar-logo img{width:120px}
+    .navbar-components h2{font-size:1.2rem}
+    .navbar-logo img{margin-left: 10px;}
+}
+
+@media(max-width:490px){
+    .navbar-components h2{font-size: 1rem;}
+    .navbar-logo img{margin-left:0px;}
+}

@@ -4,7 +4,6 @@ import pattern from '../pictures/pattern.png'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {addToReview} from '../redux/Shopping/shopping-actions'
-import nachoMao from '../pictures/nacho-mao.jpg'
 
 function ChooseASize({addToReview, products}){
     const [individual, setIndividual] = useState(false)

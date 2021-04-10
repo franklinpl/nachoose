@@ -1,7 +1,7 @@
-.your-order{
+.items-in-cart{
     width: 1300px;
     max-width: 100%;
-    height:85vmax
+    height:100vh
 }
 
 .zero-cart h1{
@@ -19,7 +19,7 @@
     align-items: center;
     background-color: #fbfbfb;
     margin: 10px 0px 0px 30px;
-    width:90vmax
+    
 }
 
 .cart-component div, .delivery-fee h2, .cart-total h1, .cart-component #extras{
@@ -63,4 +63,8 @@
 
 #confirm-order{
     background-color: #2B93C6;
+}
+
+.confirm-order{
+    margin-top:20px
 }

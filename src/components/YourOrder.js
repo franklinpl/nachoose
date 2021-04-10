@@ -34,7 +34,7 @@ function YourOrder({cart}){
     }
 
     return(
-        <div className='your-order'>
+        <div className='order'>
             {cart.length === 0 ?
                 <div className='zero-cart'>
                     <h1>There are no items in your cart</h1>
