@@ -38,8 +38,8 @@ function YourOrder({cart}){
             {cart.length === 0 ?
                 <div className='zero-cart'>
                     <h1>There are no items in your cart</h1>
-                    <div className='homescreen-button'>
-                        <Link to='/choose'>
+                    <div className='homescreen-button-zero-cart'>
+                        <Link to='/choose/choose-a-size'>
                             <Button variant='contained' color='primary' id='homescreen-button'>Order Now!</Button>
                         </Link> 
                     </div>
@@ -50,7 +50,7 @@ function YourOrder({cart}){
         <div className='items-in-cart'>
             <div className='your-order'>
                 <h1>Your order</h1>
-                <img src={pattern} alt='company pattern'/> 
+                <img src={pattern} alt='company pattern' id='pattern'/> 
 
                 <div>
     

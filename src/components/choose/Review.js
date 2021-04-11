@@ -9,7 +9,7 @@ function Review({review, addToCart}){
     return(
         <div className='review'>
             <h1>Review</h1>
-            <img src={pattern} alt='company pattern'/>
+            <img src={pattern} alt='company pattern' id='pattern'/>
 
             <div className='review-main'>
   

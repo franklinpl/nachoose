@@ -37,6 +37,7 @@
 
 #homescreen-button {
     background-color:#2B93C6;
+    font-size:1.1rem;
     width: 200px;
     height:50px;
 }
@@ -120,11 +121,11 @@
 }
 
 @media(max-width:490px){
-    .main::before{clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%); top:-220px}
-    #homescreen-logo{top:-100px; width:350px}
-    .homescreen-button{top:0px}
-    .homescreen-pattern{top:25px}
-    .homescreen-opening-times{top:60px}
+    .main::before{clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%); top:-150px}
+    #homescreen-logo{top:0px; width:350px}
+    .homescreen-button{top:60px}
+    .homescreen-pattern{top:90px}
+    .homescreen-opening-times{top:100px}
 }
 @media(max-width:420px){
     

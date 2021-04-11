@@ -67,7 +67,7 @@ function ChooseASauce({products, addToReview}){
             <div id='this-one'></div>
         </div>
         <h1>Choose a sauce</h1>
-        <img src={pattern} alt='company pattern'/>
+        <img src={pattern} alt='company pattern' id='pattern'/>
         <div className='choose-a-sauce-buttons'>
             <button onClick={() => buttonClicked('sour cream')} id={sourCream ? 'clicked' : ''}>Sour cream</button>
             <button onClick={() => buttonClicked('guacamole')} id={guacamole ? 'clicked' : ''}>

@@ -4,13 +4,30 @@
     height:100vh
 }
 
-.zero-cart h1{
-    margin-bottom:-70px
+.zero-cart{
+    width:1300px;
+    max-width:100%;
+    height:100vh;
 }
+
+.homescreen-button-zero-cart{
+    margin-top:10px
+}
+
+.homescreen-button-zero-cart a{
+    text-decoration: none;
+}
+
+.your-order > #pattern{margin-bottom:20px; margin-top:-10px}
 
 .cart-item{
     display:flex;
     flex-direction: column;
+}
+
+.cart-item, .delivery-fee, .cart-total{
+    width: 95vw;
+    margin: 10px 0px 0px 30px;
 }
 
 .cart-component, .delivery-fee, .cart-total{
@@ -18,8 +35,6 @@
     justify-content: space-between;
     align-items: center;
     background-color: #fbfbfb;
-    margin: 10px 0px 0px 30px;
-    
 }
 
 .cart-component div, .delivery-fee h2, .cart-total h1, .cart-component #extras{
@@ -68,3 +83,22 @@
 .confirm-order{
     margin-top:20px
 }
+
+@media (max-width:1100px){
+    .cart-item, .delivery-fee, .cart-total{width:93vw}
+}
+
+@media(max-width:574px){
+    .zero-cart h1{font-size: 1.6rem;}
+    .cart-component div h2, .cart-component-next h2, .delivery-fee h2{font-size: 1.3rem;}
+    .cart-total h1, .cart-total p{font-size: 1.6rem;}
+    .homescreen-button-zero-cart #homescreen-button{width:120px}
+    .cart-item, .delivery-fee, .cart-total{width:88vw}
+}
+
+@media(max-width:490px){
+    .cart-item, .delivery-fee, .cart-total{width:86vw}
+}
+
+
+

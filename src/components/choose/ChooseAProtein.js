@@ -61,7 +61,7 @@ function ChooseAProtein({products, addToReview}){
                 <div></div>
             </div>
             <h1>Choose a protein</h1>
-            <img src={pattern} alt='company pattern'/>
+            <img src={pattern} alt='company pattern' id='pattern'/>
             <div className='panela-background'>
             <div className='choose-a-protein-buttons'>
                 <button onClick={() => buttonClicked('beef')} id={beef ? 'clicked' : ''}>Beef</button>

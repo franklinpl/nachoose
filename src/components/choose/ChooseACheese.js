@@ -69,7 +69,7 @@ function ChooseACheese({products, addToReview}){
             </div>
             
             <h1>Choose a cheese</h1>
-            <img src={pattern} alt='company pattern'/>
+            <img src={pattern} alt='company pattern' id='pattern'/>
             <div className='choose-a-cheese-buttons'>
                 <button onClick={() => buttonClicked('cheedar')} id={cheedar ? 'clicked' : ''}>Cheedar</button>
                 <button onClick={() => buttonClicked('american')} id={american ? 'clicked' : ''}>American</button>

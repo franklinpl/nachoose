@@ -50,7 +50,7 @@ function ChooseASize({addToReview, products}){
             
             <div className='main-choose-a-size'>
                 <h1>Choose a size</h1>
-                <img src={pattern} alt='company pattern'/>
+                <img src={pattern} alt='company pattern' id='pattern'/>
             
                 <div className='choose-a-size-buttons'>        
                     <button onClick={() => buttonClicked('Individual')} id={individual ? 'clicked' : ''}>Individual <span>£ 7.00</span></button>

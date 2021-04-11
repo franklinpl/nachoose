@@ -41,7 +41,7 @@ function ChooseATortilha({products, addToReview}){
                 <div></div>
             </div>
             <h1>Choose a tortilha</h1>
-            <img src={pattern} alt='company pattern'/>
+            <img src={pattern} alt='company pattern' id='pattern'/>
             <div className='choose-a-tortilha-buttons'>
                 <button onClick={() => buttonClicked('fried')} id={fried ? 'clicked' : ''}>Fried 
                     <span>

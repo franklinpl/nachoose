@@ -50,5 +50,6 @@
 
 @media(max-width:490px){
     .navbar-components h2{font-size: 1rem;}
-    .navbar-logo img{margin-left:0px;}
+    .navbar-logo{align-items: center; text-align: unset; margin-top: 10px; width: 80px;}
+    .navbar-logo img{margin-left:0px; width:70px}
 }
