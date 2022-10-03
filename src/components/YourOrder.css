@@ -92,7 +92,6 @@
     .zero-cart h1{font-size: 1.6rem;}
     .cart-component div h2, .cart-component-next h2, .delivery-fee h2{font-size: 1.3rem;}
     .cart-total h1, .cart-total p{font-size: 1.6rem;}
-    .homescreen-button-zero-cart #homescreen-button{width:120px}
     .cart-item, .delivery-fee, .cart-total{width:88vw}
 }
 

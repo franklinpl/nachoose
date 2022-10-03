@@ -3,17 +3,23 @@ import {useState} from 'react'
 import pattern from '../pictures/pattern.png'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {addToReview} from '../redux/Shopping/shopping-actions'
+import {addToReview, changeItem} from '../redux/Shopping/shopping-actions'
 
-function ChooseASize({addToReview, products}){
+function ChooseASize({addToReview, products, review, changeItem}){
     const [individual, setIndividual] = useState(false)
     const [double, setDouble] = useState(false)
     const [party, setParty] = useState(false)
     const [chosenSize, setChosenSize] = useState('')
 
     const addTheItem = () => {
-        const itemId = products.filter(each => each.name === chosenSize).map(each => each.id)
-        addToReview(itemId[0])
+        const itemId = products.find(each => each.name === chosenSize).id
+        addToReview(itemId)
+    }
+
+    const change = () => {
+        const lastItem = review.find(item => item.type === 'Size')
+        const itemId = products.find(each => each.name === chosenSize).id
+        changeItem(lastItem,itemId)
     }
 
     const buttonClicked = value => {
@@ -38,7 +44,9 @@ function ChooseASize({addToReview, products}){
     }
 
     return(
+        
         <div className='choose-a-size'>
+        
             <div className='progress-bar-size'>
                 <div></div>
                 <div></div>
@@ -61,12 +69,26 @@ function ChooseASize({addToReview, products}){
    
             
             <div className='back-next'>
-                <Link to='/choose'>
-                    <button>{`<`} Back</button>
+                {
+                    review.length < 7 ? 
+                    
+                    <div>
+                        <Link to='/choose'>
+                            <button>{`<`} Back</button>
+                        </Link>
+                        <Link to='/choose/choose-a-tortilha'>
+                            <button onClick={() => addTheItem()}>Next {`>`}</button>
+                        </Link>
+                    </div>
+                   
+                :
+        
+                <Link to='/choose/review'>
+                    <button onClick={() => change()} style={{width:'10rem'}}>Back to review {`>`}</button>
                 </Link>
-                <Link to='/choose/choose-a-tortilha'>
-                    <button onClick={() => addTheItem()}>Next {`>`}</button>
-                </Link>
+
+                }
+                
                 
             </div>
         </div>
@@ -75,13 +97,15 @@ function ChooseASize({addToReview, products}){
 
 const mapStateToProps = state => {
     return {
-        products: state.shop.products
+        products: state.shop.products,
+        review: state.shop.review
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addToReview: (id) => dispatch(addToReview(id))
+        addToReview: (id) => dispatch(addToReview(id)),
+        changeItem: (lastItem, id) => dispatch(changeItem(lastItem, id))
     }
 }
 

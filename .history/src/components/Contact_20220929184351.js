@@ -54,7 +54,7 @@ function Contact(){
                 <textarea type='text' placeholder='Your message here' name='message' id='text-input' value={message}
                     onChange={(e) => setMessage(e.target.value)}/>
                 <div className='submit-button'>
-                    <button  id='contact-button'>{sending ? 'Sending ...' : 'Submit'}</button> 
+                    <button  id='contact-button'>{sending ? 'Sending ...' : 'Submit!'}</button> 
                 </div>
             </form>
             

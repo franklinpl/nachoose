@@ -3,16 +3,21 @@ import {useState} from 'react'
 import pattern from '../pictures/pattern.png'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {addToReview} from '../redux/Shopping/shopping-actions'
-import nachoPanela from '../pictures/nacho-panela.jpg'
+import {addToReview, changeItem} from '../redux/Shopping/shopping-actions'
 
-function ChooseAProtein({products, addToReview}){
+function ChooseAProtein({products, addToReview, changeItem, review}){
 
     const [beef, setBeef] = useState(false)
     const [chicken, setChicken] = useState(false)
     const [blackBeans, setBlackBeans] = useState(false)
     const [meatFreeMince, setMeatFreeMince] = useState(false)
     const [chosenProtein, setChosenProtein] = useState('')
+
+    const change = () => {
+        const lastItem = review.find(item => item.type === 'Protein')
+        const itemId = products.find(each => each.name === chosenProtein).id
+        changeItem(lastItem,itemId)
+    }
 
     const addTheItem = () => {
         const itemId = products.filter(each => each.name === chosenProtein).map(each => each.id)
@@ -81,13 +86,25 @@ function ChooseAProtein({products, addToReview}){
             </div>
             <div className='main-nacho-na-panela'>
                 <div className='back-next'>
-                    <Link to='/choose/choose-a-tortilha'>
-                        <button>{`<`} Back</button>
-                    </Link>
-                    <Link to='/choose/choose-a-cheese'>
-                        <button onClick={() => addTheItem()}>Next {`>`}</button>
-                    </Link>
+                {
+                    review.length < 7 ? 
                     
+                    <div>
+                        <Link to='/choose-a-tortilha'>
+                            <button>{`<`} Back</button>
+                        </Link>
+                        <Link to='/choose/choose-a-cheese'>
+                            <button onClick={() => addTheItem()}>Next {`>`}</button>
+                        </Link>
+                    </div>
+                   
+                :
+        
+                <Link to='/choose/review'>
+                    <button onClick={() => change()} style={{width:'10rem'}}>Back to review {`>`}</button>
+                </Link>
+
+                }
                 </div>
             </div>
         </div>
@@ -98,13 +115,15 @@ function ChooseAProtein({products, addToReview}){
 
 const mapStateToProps = state => {
     return {
-        products: state.shop.products
+        products: state.shop.products,
+        review: state.shop.review
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addToReview: (id) => dispatch(addToReview(id))
+        addToReview: (id) => dispatch(addToReview(id)),
+        changeItem: (lastItem, id) => dispatch(changeItem(lastItem, id))
     }
 }
 

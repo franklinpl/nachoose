@@ -16,16 +16,16 @@ function Navbar(){
                     <h2>Choose</h2>
                 </Link>
                 
-                <Link to='/your-order'>
-                    <h2>Your Order</h2>
-                </Link>
-                
                 <Link to='/about'>
                     <h2>About</h2>
                 </Link>
 
                 <Link to='/contact'>
                     <h2>Contact</h2>
+                </Link>
+
+                <Link to='/your-order'>
+                    <h2>Cart</h2>
                 </Link>
             </div>
         </div>

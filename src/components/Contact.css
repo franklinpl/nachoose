@@ -39,10 +39,18 @@
 }
 
 #contact-button{
-    background-color: #2B93C6;
+    background-color: black;
     width: 150px;
     height:40px;
-    text-decoration: none
+    text-decoration: none;
+    color:#f4f4f4;
+    cursor:pointer;
+    font-size: 1.2rem;
+    border:none
+}
+
+#contact-button:hover{
+    background-color: #2B93C6
 }
 
 .contact-opening-times{
@@ -75,6 +83,10 @@
 .contact h3 span{
     margin-right:30px;
     font-weight: bold;
+}
+
+#message-sent{
+    color:green
 }
 
 @media(max-width:574px){

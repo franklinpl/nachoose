@@ -21,7 +21,7 @@ function YourOrder({cart, removeFromCart}){
                 item.filter(item => item.price > 0))[0][0].price
             const deliveryFee = 3.5;
             let extras = 0;
-            cart.forEach(item => item.forEach(item => { 
+            cart.map(item => item.map(item => {
                 if (item.extraCheese === 'yes'){extras += 1}
                 if (item.extraSauce === 'yes'){extras += 1}
                 if (item.type === 'Extra'){extras += 0.8}

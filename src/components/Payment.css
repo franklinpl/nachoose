@@ -1,0 +1,118 @@
+.payment{
+    width: 1300px;
+    max-width: 100%;
+    height: 100%;
+}
+
+#payment-text{
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 2rem
+}
+
+.processing{
+    width: 1300px;
+    max-width: 100%;
+    height:100vh
+}
+
+.processing p{
+    margin-top: -10px;
+}
+
+.billing-information, .card-information{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.billing-information h1, .card-information h1{
+    font-size: 1.8rem;
+    margin-top:40px
+}
+
+.billing-information input, .card-information input{
+    width: 40vw;
+    height:30px;
+    border:1px solid rgba(0,0,0,0.2);
+    border-radius:5px;
+    margin-bottom: 5px;
+}
+
+.country-and-city, .phone-number, .date-and-CVV, .post-code{
+    width: 40vw; 
+    display:flex
+}
+
+#country, #code, #date, #cvv{
+    width:150px;
+    margin-right:5px
+}
+
+#post-code{width:150px;}
+
+#full-name{margin-bottom: 30px;}
+
+.confirm-order a{
+    text-decoration: none;
+}
+
+.confirm-order{
+    margin-bottom: 20px;
+}
+
+.colored-balls{
+    display: flex;
+    justify-content: center;
+    margin-top:40px
+}
+
+.colored-balls div{
+    height:15px;
+    width:15px;
+    margin:5px;
+    border-radius: 50%;
+}
+
+#green{
+    background-color: green;
+    border:2px solid #004600;
+    animation:top-to-the-bottom 1s ease-in 0.3s infinite
+}
+
+#red{
+    background-color: red;
+    border:2px solid rgb(172, 0, 0);
+    animation:top-to-the-bottom 1s ease-in 0.6s infinite
+}
+
+#yellow{
+    background-color: yellow;
+    border:2px solid rgb(151, 151, 0);
+    animation: top-to-the-bottom 1s ease-in infinite 
+}
+
+@keyframes top-to-the-bottom{
+
+    50%{
+        transform: translateY(-100%)
+    }
+    
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+@media(max-width:1000px){
+    .billing-information input, .card-information input {width:60vw}
+    .country-and-city, .phone-number, .date-and-CVV, .post-code {width:60vw}
+}
+
+@media(max-width:670px){
+    .billing-information input, .card-information input {width:80vw}
+    .country-and-city, .phone-number, .date-and-CVV, .post-code {width:80vw}
+}
+
+@media(max-width:400px){
+    #city, #phone{width:50%}
+}

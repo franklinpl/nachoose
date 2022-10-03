@@ -15,6 +15,8 @@ import Choose from './components/choose/Choose'
   import Review from './components/choose/Review';
 import YourOrder from './components/YourOrder'
 import About from './components/About'
+import Payment from './components/Payment'
+import OnTheWay from './components/OnTheWay'
 
 
 
@@ -37,6 +39,8 @@ function App() {
         <Route exact path='/your-order' component={YourOrder}/>
         <Route exact path='/about' component={About}/>
         <Route exact path='/contact' component={Contact}/>
+        <Route exact path='/payment' component={Payment}/>
+        <Route exact path='/onTheWay' component={OnTheWay}/>
       </Switch>
     
     </div>

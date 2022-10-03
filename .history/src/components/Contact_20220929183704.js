@@ -8,12 +8,9 @@ function Contact(){
     const [message, setMessage] = useState('')
     const [name, setName] = useState('')
     const [messageSent, setMessageSent] = useState(false)
-    const [sending, setSending] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
-        setSending(true)
 
         let template_params = {
             project:'nachoose',
@@ -27,12 +24,9 @@ function Contact(){
         }, (error) => {
             console.log(error)
         })
-
-        setSending(false)
        
         setEmail('')
         setMessage('')
-        setName('')
     }
 
     return(
@@ -54,7 +48,7 @@ function Contact(){
                 <textarea type='text' placeholder='Your message here' name='message' id='text-input' value={message}
                     onChange={(e) => setMessage(e.target.value)}/>
                 <div className='submit-button'>
-                    <button  id='contact-button'>{sending ? 'Sending ...' : 'Submit'}</button> 
+                    <button  id='contact-button'>Submit!</button> 
                 </div>
             </form>
             

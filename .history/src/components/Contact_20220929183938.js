@@ -32,7 +32,6 @@ function Contact(){
        
         setEmail('')
         setMessage('')
-        setName('')
     }
 
     return(

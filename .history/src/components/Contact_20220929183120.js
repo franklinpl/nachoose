@@ -8,12 +8,9 @@ function Contact(){
     const [message, setMessage] = useState('')
     const [name, setName] = useState('')
     const [messageSent, setMessageSent] = useState(false)
-    const [sending, setSending] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
-        setSending(true)
 
         let template_params = {
             project:'nachoose',
@@ -21,18 +18,15 @@ function Contact(){
             message: message
         }
 
-        emailjs.sendForm('gmail', 'template_jit7267',e.target,'zglz4geI1KghnKy9A', template_params).then((result) => {
+        emailjs.sendForm('gmail', 'template_jit7267',e.target,'user_ei2HwlX5HUA6Vb2BoNWPR', template_params).then((result) => {
             console.log(result)
             setMessageSent(true)
         }, (error) => {
             console.log(error)
         })
-
-        setSending(false)
        
         setEmail('')
         setMessage('')
-        setName('')
     }
 
     return(
@@ -54,7 +48,7 @@ function Contact(){
                 <textarea type='text' placeholder='Your message here' name='message' id='text-input' value={message}
                     onChange={(e) => setMessage(e.target.value)}/>
                 <div className='submit-button'>
-                    <button  id='contact-button'>{sending ? 'Sending ...' : 'Submit'}</button> 
+                    <button  id='contact-button'>Submit!</button> 
                 </div>
             </form>
             

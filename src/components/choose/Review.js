@@ -16,7 +16,7 @@ function Review({review, addToCart}){
                 <div className='review-box'>
                     <div className='title-and-change'>
                         <h1>Size</h1>
-                        <a href='/choose/choose-a-size'>Change</a>
+                        <Link to='/choose/choose-a-size'>Change</Link>
                     </div>
                     <p id='item-name'>{review.filter(item => item.type === 'Size').map(item => item.name)}</p>
                 </div>
@@ -24,7 +24,7 @@ function Review({review, addToCart}){
                 <div className='review-box'>
                     <div className='title-and-change'>
                         <h1>Tortilha</h1>
-                        <a href='/choose/choose-a-tortilha'>Change</a>
+                        <Link to='/choose/choose-a-tortilha'>Change</Link>
                     </div>
                     <p id='item-name'>{review.filter(item => item.type === 'Tortilha').map(item => item.name)}</p>
                 </div>
@@ -32,7 +32,7 @@ function Review({review, addToCart}){
                 <div className='review-box'>
                     <div className='title-and-change'>
                         <h1>Protein</h1>
-                        <a href='/choose/choose-a-protein'>Change</a>
+                        <Link to='/choose/choose-a-protein'>Change</Link>
                     </div>
                     <p id='item-name'>{review.filter(item => item.type === 'Protein').map(item => item.name)}</p>
                 </div>
@@ -40,7 +40,7 @@ function Review({review, addToCart}){
                 <div className='review-box'>
                     <div className='title-and-change'>
                         <h1>Veggies</h1>
-                        <a href='/choose/choose-some-veggies'>Change</a>
+                        <Link to='/choose/choose-some-veggies'>Change</Link>
                     </div>
                     <div className='name-and-extra'>
                         <p id='item-name'>{review.filter(item => item.type === 'Veggies').map(item => item.name)}</p>
@@ -52,7 +52,7 @@ function Review({review, addToCart}){
                 <div className='review-box'>
                     <div className='title-and-change'>
                         <h1>Cheese</h1>
-                        <a href='/choose/choose-a-cheese'>Change</a>
+                        <Link to='/choose/choose-a-cheese'>Change</Link>
                     </div>
                     <div className='name-and-extra'>
                         <p id='item-name'>{review.filter(item => item.type === 'Cheese').map(item => item.name)}</p>
@@ -64,7 +64,7 @@ function Review({review, addToCart}){
                 <div className='review-box'>
                     <div className='title-and-change'>
                         <h1>Sauce</h1>
-                        <a href='/choose/choose-a-sauce'>Change</a>
+                        <Link to='/choose/choose-a-sauce'>Change</Link>
                     </div>
                     <div className='name-and-extra'>
                         <p id='item-name'>{review.filter(item => item.type === 'Sauce').map(item => item.name)}</p>
